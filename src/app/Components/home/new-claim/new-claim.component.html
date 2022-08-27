@@ -1,0 +1,80 @@
+<div class="main-claim-wrapper">
+    <p class="heading">File a Claim</p>
+    <div class="new-claim-wrapper">
+        <div class="stepper-menu shadow-wrapper">
+            <ul>
+                <li id="menu-policy" class="menu active" (click)="menuClick('menu-policy', 'policy')">Select a Policy
+                </li>
+                <li id="menu-vehicle" class="menu" (click)="menuClick('menu-vehicle', 'vehicle')">Vehicle Details
+                </li>
+                <li id="menu-driver" class="menu" (click)="menuClick('menu-driver', 'driver')">Driver Details</li>
+                <li id="menu-loss" class="menu" (click)="menuClick('menu-loss', 'loss')">Loss Details</li>
+                <li id="menu-property" class="menu" (click)="menuClick('menu-property', 'property')">Property Details
+                </li>
+                <li id="menu-witness" class="menu" (click)="menuClick('menu-witness', 'witness')">Injured & Witness
+                    Details
+                </li>
+                <li id="menu-document" class="menu" (click)="menuClick('menu-document', 'document')">Upload
+                    Document(s)</li>
+                <li id="menu-summary" class="menu" (click)="menuClick('menu-summary', 'summary')">Summary</li>
+            </ul>
+        </div>
+        <div class="stepper-content shadow-wrapper">
+            <div id="policy" class="menu-content">
+                <p class="subheading">Policies associated with your Vehicle(s)</p>
+                <p>Please choose a policy to proceed.</p>
+                <table>
+                    <tr>
+                        <th>Policy Number</th>
+                        <th>Product</th>
+                        <th>Policy Start Date</th>
+                        <th>Policy End Date</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr>
+                        <td>POL123456</td>
+                        <td>Auto</td>
+                        <td>03-06-2020</td>
+                        <td>02-06-2025</td>
+                        <td>Active</td>
+                        <td>
+                            <input type="radio" name="isPolicySelected" id="selectPolicy1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>POL987654</td>
+                        <td>Liability</td>
+                        <td>07-09-2021</td>
+                        <td>06-09-2026</td>
+                        <td>Active</td>
+                        <td>
+                            <input type="radio" name="isPolicySelected" id="selectPolicy2">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="vehicle" class="menu-content display-none">
+                <p>vehicle</p>
+            </div>
+            <div id="driver" class="menu-content display-none">
+                <p>driver</p>
+            </div>
+            <div id="loss" class="menu-content display-none">
+                <p>loss</p>
+            </div>
+            <div id="property" class="menu-content display-none">
+                <p>property</p>
+            </div>
+            <div id="witness" class="menu-content display-none">
+                <p>witness</p>
+            </div>
+            <div id="document" class="menu-content display-none">
+                <p>document</p>
+            </div>
+            <div id="summary" class="menu-content display-none">
+                <p>summary</p>
+            </div>
+        </div>
+    </div>
+</div>

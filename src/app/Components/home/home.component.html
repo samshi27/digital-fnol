@@ -1,0 +1,66 @@
+<div class="home-wrapper">
+    <div class="product-wrapper shadow-wrapper">
+        <p class="heading">Initiate a Claim</p>
+        <p>Please choose a product.</p>
+        <div class="flex-wrapper">
+            <div class="menu-icon" routerLink="new-car-claim">
+                <img src="../../../assets/icons/car.svg" alt="car">
+                <p>Car</p>
+            </div>
+            <div class="menu-icon">
+                <img src="../../../assets/icons/health.svg" alt="car">
+                <p>Health</p>
+            </div>
+            <div class="menu-icon">
+                <img src="../../../assets/icons/life.svg" alt="car">
+                <p>Life</p>
+            </div>
+            <div class="menu-icon">
+                <img src="../../../assets/icons/property.svg" alt="car">
+                <p>Property</p>
+            </div>
+            <div class="menu-icon">
+                <img src="../../../assets/icons/travel.svg" alt="car">
+                <p>Travel</p>
+            </div>
+            <div class="menu-icon">
+                <img src="../../../assets/icons/liability.svg" alt="car">
+                <p>Liability</p>
+            </div>
+        </div>
+    </div>
+    <div class="claim-wrapper shadow-wrapper">
+        <p class="heading">Track Your Claim</p>
+        <p class="sub-heading">Please enter your Claim Number.</p>
+        <form #trackingForm="ngForm">
+            <div class="tracking-wrapper">
+                <input #claimModel="ngModel" required [(ngModel)]="claimNumber" type="number" name="claimNumber"
+                    id="claimNumber" placeholder="Claim Number (Example: 123456)">
+            </div>
+
+            <div class="submit-button">
+                <!-- <button [disabled]="claimModel.invalid" class="primary-button" type="submit"
+                    (click)="trackButtonClick()">Track</button> -->
+                <button class="primary-button" type="submit" (click)="trackButtonClick()">Track</button>
+            </div>
+        </form>
+        <div *ngIf="isTrackButtonClicked" class="claim-details">
+            <p class="subheading">Summary</p>
+            <table>
+                <tr>
+                    <td class="property">Claim Number</td>
+                    <td>{{claimNumber}}</td>
+                </tr>
+                <tr>
+                    <td>Date of Claim</td>
+                    <td>{{claimDate}}</td>
+                </tr>
+                <tr>
+                    <td>Status</td>
+                    <td>{{claimStatus}}</td>
+                </tr>
+            </table>
+            <!-- <button class="primary-button">View Claim Details</button> -->
+        </div>
+    </div>
+</div>

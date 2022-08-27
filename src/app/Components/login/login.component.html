@@ -1,0 +1,28 @@
+<div class="login-wrapper">
+    <div class="cover-image">
+        <img src="../../../assets/images/cover-image-2.jpg" alt="Insurance">
+    </div>
+    <div class="login-form">
+        <form>
+            <div class="description">
+                <p class="heading">Log in</p>
+                <p>Please enter your log in details.</p>
+            </div>
+
+            <div class="email-input">
+                <input #userEmail="ngModel" autocomplete="username" [(ngModel)]="email" type="email" name="email"
+                    id="emailInput" placeholder="Email">
+            </div>
+
+            <div class="password-input">
+                <input #userPassword="ngModel" autocomplete="current-password" [(ngModel)]="password" type="password"
+                    name="password" id="passwordInput" placeholder="Password">
+            </div>
+
+            <div class="submit-button">
+                <button [disabled]="userEmail.invalid && userPassword.invalid" routerLink="/home" class="primary-button"
+                    type="button">Log in</button>
+            </div>
+        </form>
+    </div>
+</div>

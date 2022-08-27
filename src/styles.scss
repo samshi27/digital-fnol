@@ -1,1 +1,361 @@
-/* You can add global styles to this file, and also import other style files */
+$primary-color: #353535;
+$primary-accent-color: #FA9746;
+$secondary-accent-color: #EE7E28;
+$highlight-color: #e8e8e8;
+$background-color: #FAFAFA;
+
+* {
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(174, 174, 174);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $primary-accent-color;
+    border-radius: 10px;
+}
+
+::-webkit-input-placeholder {
+    font-family: 'Open Sans', sans-serif;
+}
+
+:-ms-input-placeholder {
+    font-family: 'Open Sans', sans-serif;
+}
+
+::placeholder {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+    color: $primary-color;
+}
+
+.app-wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.header-wrapper {
+    width: 100%;
+    height: 4rem;
+    top: 0;
+    z-index: 9;
+    position: sticky;
+
+    nav {
+        padding: 1rem;
+
+        h1 {
+            display: inline;
+            margin: 0;
+            font-size: 2rem;
+            color: $secondary-accent-color;
+        }
+
+        h1:hover {
+            cursor: pointer;
+        }
+    }
+
+}
+
+.primary-button {
+    width: 100%;
+    padding: 0.7rem;
+    color: $primary-color;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.8rem;
+    border: none;
+    border-radius: 10px;
+    background-color: $primary-accent-color;
+    transition: background-color 0.2s ease-in;
+}
+
+.primary-button:hover {
+    cursor: pointer;
+    background-color: $secondary-accent-color;
+}
+
+.primary-button:focus-visible {
+    outline: none;
+    background-color: $secondary-accent-color;
+}
+
+.primary-button:disabled {
+    background-color: $highlight-color;
+}
+
+.heading {
+    display: inline;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.subheading {
+    display: inline;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.text-danger {
+    color: red;
+}
+
+input {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid $highlight-color;
+    border-radius: 10px;
+    transition: border 0.2s ease-in;
+}
+
+input:hover {
+    border: 1px solid $primary-accent-color;
+}
+
+input:focus-visible {
+    outline: none;
+    border: 1px solid $primary-accent-color;
+}
+
+.submit-button {
+    margin-top: 1rem;
+    // margin-bottom: 1rem;
+}
+
+.router-wrapper {
+    width: 90%;
+    margin: auto;
+}
+
+.shadow-wrapper {
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: 5px 5px 1rem $highlight-color;
+}
+
+.login-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    .cover-image img {
+        height: 460px;
+        margin-right: 3rem;
+    }
+
+    .login-form {
+        width: 350px;
+        height: fit-content;
+        padding: 2rem;
+        border-radius: 2rem;
+        box-shadow: 5px 5px 1.5rem $highlight-color;
+
+        .description h1 {
+            margin-bottom: 0;
+        }
+
+        .email-input,
+        .password-input {
+            margin-top: 1rem;
+        }
+    }
+}
+
+.home-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .product-wrapper {
+        width: 35rem;
+        margin: 3rem;
+        height: fit-content;
+
+        .flex-wrapper {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .menu-icon {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 130px;
+                height: 130px;
+                margin: 1rem;
+                border-radius: 2rem;
+                transition: border 0.2s ease-in;
+                transition: background-color 0.2s ease;
+                border: 1px solid $highlight-color;
+
+                p {
+                    font-weight: 600;
+                    margin-bottom: 0;
+                }
+            }
+
+            .menu-icon:hover {
+                cursor: pointer;
+                background-color: $primary-accent-color;
+            }
+        }
+    }
+
+    .claim-wrapper {
+        width: 25rem;
+        margin: 3rem 3rem 3rem 1rem;
+        height: fit-content;
+
+        h1 {
+            margin-top: 0;
+        }
+
+        .tracking-wrapper {
+            margin-top: 2rem;
+        }
+
+        .claim-details {
+            margin-top: 2rem;
+            padding: 1rem;
+            border-radius: 1rem;
+            border: 1px solid $highlight-color;
+
+            table {
+                padding: 1rem 0;
+                width: 100%;
+
+                td {
+                    padding: 0.5rem 0;
+                    vertical-align: bottom;
+                    // border: 1px solid $highlight-color;
+                }
+
+                .property {
+                    width: 35%;
+                }
+            }
+        }
+    }
+}
+
+.main-claim-wrapper {
+    margin-top: 3rem;
+
+    .new-claim-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 3rem;
+
+        .stepper-menu {
+            width: 20%;
+            margin-right: 2rem;
+
+            ul {
+                list-style: none;
+                padding-left: 0;
+                margin: 0;
+                border-radius: 1rem;
+
+                .active:first-child {
+                    background-color: $primary-accent-color;
+                    border-radius: 1rem 1rem 0 0;
+                }
+
+                .active {
+                    background-color: $primary-accent-color;
+                    font-weight: 500;
+                }
+
+                .active:last-child {
+                    background-color: $primary-accent-color;
+                    border-radius: 0 0 1rem 1rem;
+                }
+
+                li {
+                    padding: 0.7rem 0.5rem;
+                    border-bottom: 1px solid $highlight-color;
+                    transition: background-color 0.2s ease;
+                }
+
+                li:hover {
+                    cursor: pointer;
+                    background-color: $primary-accent-color;
+                }
+
+                li:first-child {
+                    border-radius: 1rem 1rem 0 0;
+                }
+
+                li:first-child:hover {
+                    border-radius: 1rem 1rem 0 0;
+                }
+
+                li:last-child {
+                    border-bottom: none;
+                    border-radius: 0 0 1rem 1rem;
+                }
+
+                li:last-child:hover {
+                    border-radius: 0 0 1rem 1rem;
+                }
+            }
+        }
+
+        .stepper-content {
+            width: 70%;
+            margin-left: 2rem;
+
+            .display-none {
+                display: none;
+            }
+
+            table {
+                padding: 2rem 0;
+                width: 100%;
+
+                th {
+                    text-align: left;
+                    padding: 0.5rem 0;
+                    vertical-align: bottom;
+                }
+
+                td {
+                    text-align: left;
+                    padding: 0.5rem 0;
+                    vertical-align: bottom;
+                }
+            }
+        }
+    }
+}
+
+
+.footer-wrapper {
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 3rem;
+}
